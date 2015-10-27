@@ -5,7 +5,7 @@ require 'blink1_rspec_formatter/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "blink1_rspec_formatter"
-  spec.version       = Blink1RspecResult::VERSION
+  spec.version       = Blink1RspecFormatter::VERSION
   spec.authors       = ["ymanabe"]
   spec.email         = ["ymanabe@beaglesoft.net"]
 

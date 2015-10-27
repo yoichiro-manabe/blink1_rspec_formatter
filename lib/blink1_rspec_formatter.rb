@@ -1,4 +1,4 @@
-require "blink1_rspec_formatter/version"
+# require "blink1_rspec_formatter/version"
 require 'pp'
 require 'blink1'
 
