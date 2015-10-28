@@ -9,15 +9,11 @@ class Blink1RspecFormatter
   COLOR_PENDING = [255, 200, 0]
   COLOR_FAIL = [255, 10, 30]
 
-  RSpec::Core::Formatters.register self, :example_started, :close, :dump_failures, :dump_pending
+  RSpec::Core::Formatters.register self, :close, :dump_failures, :dump_pending
 
   def initialize(output)
     @output = output
     @status = {failure: 0, pending: 0}
-  end
-
-  def example_started(notification)
-    # @output << "example: " << notification.example.description
   end
 
   def dump_failures(notification)
@@ -32,7 +28,7 @@ class Blink1RspecFormatter
     end
   end
 
-  def close(_notifirer)
+  def close(notification)
 
     blink1 = Blink1.new
     blink1.open
